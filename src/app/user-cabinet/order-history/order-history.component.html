@@ -1,0 +1,22 @@
+<section>
+    <table>
+        <thead>
+            <tr>
+                <th scope="col">Категорія</th>
+                <th scope="col">Назва</th>
+                <th scope="col">Кількість</th>
+                <th scope="col">Сума</th>
+                <th scope="col">Зображення</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr class="order" *ngFor="let order of goodArr">
+                <td>{{order.component.titel}}:</td>
+                <td>{{order.name}}</td>
+                <td>{{order.count}}</td>
+                <td>{{order.price}}</td>
+                <td><img [src]="order.images"></td>
+            </tr>
+        </tbody>
+    </table>
+</section>

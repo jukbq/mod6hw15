@@ -1,0 +1,22 @@
+<form [formGroup]="callBackForm" (ngSubmit)="submitCallBack()"
+    class="modal-content">
+    <button type="button" class="btn-close" (click)="closeModal()"
+        aria-label="Закрити"></button>
+
+    <h3 mat-dialog-title>Ми зателефонуємо</h3>
+    <p>Залиште свій номер телефону і наші менеджери зв'яжуться з вами</p>
+
+    <div class="modal-body">
+        <input formControlName="firstname" name="firstname" type="text"
+            class="form-control" placeholder="Ваше ім`я:">
+        <br>
+
+        <input formControlName="phone" name="phone" type="number"
+            class="form-control" placeholder="Ваш номер телефону телефон:">
+
+    </div>
+
+    <div class="call_back_button" mat-dialog-actions>
+        <button class="btn" type="submit" mat-raised-button color="primary">Надіслати</button>
+    </div>
+</form>
