@@ -16,6 +16,9 @@ import { OrderComponent } from './order/order.component';
     GoodsComponent,
     OrderComponent,
   ],
-  imports: [CommonModule, AdminRoutingModule, SharedModule],
+  imports: [
+    CommonModule,
+     AdminRoutingModule, 
+     SharedModule],
 })
 export class AdminModule {}

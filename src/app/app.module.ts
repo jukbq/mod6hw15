@@ -21,9 +21,9 @@ import { SighUpComponent } from './commponents/sigh-up/sigh-up.component';
 import { DeliveryComponent } from './pages/delivery/delivery.component';
 import { AboutUsComponent } from './pages/about-us/about-us.component';
 import { BasketComponent } from './commponents/basket/basket.component';
-import { providePerformance,getPerformance } from '@angular/fire/performance';
-import { provideRemoteConfig,getRemoteConfig } from '@angular/fire/remote-config';
-import  { SharedModule } from './shared/shared.module';
+import { providePerformance, getPerformance } from '@angular/fire/performance';
+import { provideRemoteConfig, getRemoteConfig } from '@angular/fire/remote-config';
+import { SharedModule } from './shared/shared.module';
 
 @NgModule({
   declarations: [
@@ -34,7 +34,7 @@ import  { SharedModule } from './shared/shared.module';
     AboutUsComponent,
     SighUpComponent,
     BasketComponent,
-      ],
+  ],
 
   imports: [
     BrowserModule,

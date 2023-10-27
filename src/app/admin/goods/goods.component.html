@@ -42,15 +42,13 @@
   <div class="form_conteiner" [ngClass]="{ active: !good_form }">
     <form [formGroup]="goodForm" (ngSubmit)="creatGood()" class="form_action">
       <div class="top_input">
-        <select
-          formControlName="component"
-          name="component"
-          class="form-select"
-        >
-          <option [ngValue]="category" *ngFor="let category of category">
-            {{ category.titel }}
-          </option>
-        </select>
+      <select formControlName="component" name="component" class="form-select">
+        <option value="" disabled selected>Оберіть категорію</option>
+        <option [ngValue]="category" *ngFor="let category of category">
+          {{ category.titel }}
+        </option>
+      </select>
+
 
         <input
           formControlName="name"

@@ -71,17 +71,23 @@ export class HraderComponent implements OnInit {
 
   changeUserUrl() {
     const currentUserString = localStorage.getItem('curentUser');
+    console.log(currentUserString);
+    console.log(this.isLogin);
+
     if (typeof currentUserString === 'string') {
       const courentUser = JSON.parse(currentUserString);
       if (courentUser && courentUser.role == ROLE.ADMIN) {
         this.isLogin = true;
         this.loginUrl = 'admin';
+        console.log('admin - ', this.isLogin);
       } else if (courentUser && courentUser.role == ROLE.USER) {
         this.isLogin = true;
         this.loginUrl = 'user-cabinet';
+        console.log('user-cabinet - ', this.isLogin);
       } else {
         this.isLogin = false;
         this.loginUrl = ' ';
+        console.log('false- ', this.isLogin);
       }
     }
   }

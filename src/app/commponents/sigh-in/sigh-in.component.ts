@@ -4,9 +4,7 @@ import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { Router } from '@angular/router';
 import {
   Auth,
-  createUserWithEmailAndPassword,
   signInWithEmailAndPassword,
-  UserCredential,
 } from '@angular/fire/auth';
 import { stringLength } from '@firebase/util';
 import { observable, Subscription } from 'rxjs';
@@ -65,9 +63,7 @@ export class SighInComponent implements OnInit, OnDestroy {
 
   async login(email: string, password: string): Promise<void> {
     const curent = await signInWithEmailAndPassword(this.auth, email, password);
-
-    this.loginSubscription = docData(
-      doc(this.afs, 'users', curent.user.uid)
+    this.loginSubscription = docData(doc(this.afs, 'users', curent.user.uid)
     ).subscribe((user) => {
 
       this.user = user;
